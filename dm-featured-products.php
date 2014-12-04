@@ -25,7 +25,7 @@ function register_cpt_featured_product() {
 		'not_found' => _x( 'No featured products found', 'featured_product' ),
 		'not_found_in_trash' => _x( 'No featured products found in Trash', 'featured_product' ),
 		'parent_item_colon' => _x( 'Parent Featured Product:', 'featured_product' ),
-		'menu_name' => _x( 'Featured Products', 'featured_product' ),
+		'menu_name' => _x( 'Featured', 'featured_product' ),
 	);
 	$args = array(
 		'labels' => $labels,
@@ -41,6 +41,7 @@ function register_cpt_featured_product() {
 		'query_var' => true,
 		'can_export' => true,
 		'rewrite' => false,
+		'menu_icon' => 'dashicons-heart',
 		'capability_type' => 'post'
 	);
 	register_post_type( 'featured_product', $args );
